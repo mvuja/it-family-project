@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { Host_Grotesk } from 'next/font/google'
-import './globals.css'
 
 const hostGrotesk = Host_Grotesk({
 	variable: '--font-host-grotesk',
