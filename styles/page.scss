@@ -1,5 +1,6 @@
 $white: #f9fcfc;
 $black: #2a2a2a;
+$grey: #acacac;
 $lt-grey: #f2f2f2;
 $drk-grey: #585656;
 $green: #154b50;
@@ -89,5 +90,39 @@ $lt-green: #0b828a;
 // HEADER
 
 // HERO
+
+#hero {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: $lt-grey;
+
+	.left {
+		padding: 10rem;
+
+		p {
+			margin-block: 5rem;
+		}
+
+		.search {
+			background-color: $green;
+			border: 2px solid $green;
+			border-radius: 4px;
+			display: flex;
+			max-width: 40rem;
+
+			input {
+				background-color: $green;
+				color: $white;
+				font-size: 1.6rem;
+				width: 100%;
+				padding: 1.3rem 1.2rem;
+
+				&::placeholder {
+					color: $white;
+				}
+			}
+		}
+	}
+}
 
 // HERO
