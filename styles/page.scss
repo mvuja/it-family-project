@@ -126,3 +126,24 @@ $lt-green: #0b828a;
 }
 
 // HERO
+
+// NEWS
+
+#news {
+	padding-block: 10rem;
+
+	.posts {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 2rem;
+		margin-top: 5rem;
+	}
+}
+
+// NEWS
+
+// FOOTER
+footer {
+	background-color: $lt-grey;
+}
+// FOOTER
