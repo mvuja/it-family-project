@@ -1,12 +1,21 @@
-import React from 'react'
 import Card from './ui/Card'
+import { PostSchema } from '@/types/post'
+import { z } from 'zod'
+
+const PostsResponseSchema = z.object({
+	posts: z.array(PostSchema),
+})
 
 export default async function News() {
-	const data = await fetch('https://dummyjson.com/posts')
-	const fetchedData = await data.json()
-	const posts = fetchedData.posts
-	const latestThree = posts.slice(0, 3)
-	console.log(latestThree)
+	const res = await fetch('https://dummyjson.com/posts')
+
+	if (!res.ok) {
+		throw new Error('Failed to fetch posts')
+	}
+
+	const json = await res.json()
+	const parsed = PostsResponseSchema.parse(json) // <-- Validation
+	const latestThree = parsed.posts.slice(0, 3)
 
 	return (
 		<section id='news'>

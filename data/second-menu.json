@@ -1,0 +1,40 @@
+[
+	{
+		"label": "Conseil central",
+		"href": "/"
+	},
+	{
+		"label": "Surveillance",
+		"href": "/",
+		"submenu": [
+			{
+				"label": "CCSP",
+				"href": "/"
+			},
+			{
+				"label": "Commissions de surveillance",
+				"href": "/"
+			}
+		]
+	},
+	{
+		"label": "Avis",
+		"href": "/"
+	},
+	{
+		"label": "Droit de plainte",
+		"href": "/"
+	},
+	{
+		"label": "Publications",
+		"href": "/"
+	},
+	{
+		"label": "Mécanisme de prévention",
+		"href": "/"
+	},
+	{
+		"label": "Je suis détenu(e)",
+		"href": "/"
+	}
+]

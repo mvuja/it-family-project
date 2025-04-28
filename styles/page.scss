@@ -5,6 +5,7 @@ $lt-grey: #f2f2f2;
 $drk-grey: #585656;
 $green: #154b50;
 $lt-green: #0b828a;
+$lines: #dedede;
 
 @import 'reset';
 
@@ -20,15 +21,6 @@ $lt-green: #0b828a;
 		align-items: center;
 		gap: 4rem;
 		height: 100%;
-
-		.lang {
-			display: flex;
-			gap: 1rem;
-
-			a:not(.active) {
-				opacity: 0.4;
-			}
-		}
 
 		a {
 			font-size: 1.4rem;
@@ -145,5 +137,85 @@ $lt-green: #0b828a;
 // FOOTER
 footer {
 	background-color: $lt-grey;
+	padding: 10rem 0 7rem;
+
+	.top {
+		display: grid;
+		grid-template-columns: 15% 1fr 1fr 1fr;
+		gap: 8rem;
+
+		ul {
+			li:not(:last-child) {
+				margin-bottom: 1.7rem;
+			}
+		}
+
+		.inner-col {
+			display: flex;
+			gap: 5rem;
+		}
+
+		h6 {
+			position: relative;
+			padding-bottom: 0.6rem;
+			margin-bottom: 2rem;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 100%;
+				height: 1px;
+				background-color: $lines;
+			}
+		}
+
+		.submenu {
+			margin-top: 1.7rem;
+
+			a {
+				color: $grey;
+			}
+		}
+
+		a {
+			color: $black;
+			font-size: 1.6rem;
+		}
+	}
+
+	.bottom {
+		border-top: 1px solid $lines;
+		margin-top: 4rem;
+		padding-top: 4rem;
+		display: flex;
+		justify-content: space-between;
+
+		.left {
+			display: flex;
+			gap: 2rem;
+
+			.col {
+				display: flex;
+				align-items: center;
+				gap: 0.7rem;
+				span {
+					color: $drk-grey;
+					font-size: 1.6rem;
+				}
+			}
+		}
+
+		.right {
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+
+			p {
+				font-size: 1.6rem;
+			}
+		}
+	}
 }
 // FOOTER

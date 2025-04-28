@@ -2,8 +2,13 @@ import Image from 'next/image'
 import placeholder from '@/img/image.png'
 import like from '@/img/like.png'
 import dislike from '@/img/dislike.png'
+import { Post } from '@/types/post'
 
-const Card = ({ post }) => {
+interface CardProps {
+	post: Post
+}
+
+const Card = ({ post }: CardProps) => {
 	return (
 		<div className='card'>
 			<Image className='main-img' src={placeholder} alt={post.title} width={500} height={278} />

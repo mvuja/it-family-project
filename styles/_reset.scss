@@ -189,6 +189,8 @@ h4,
 h5,
 h6 {
 	text-wrap: balance;
+	color: $black;
+	letter-spacing: -0.03em;
 }
 
 p {
@@ -201,8 +203,6 @@ p {
 h1 {
 	font-size: 6.4rem;
 	font-weight: 400;
-	color: $black;
-	letter-spacing: -0.03em;
 
 	span {
 		text-decoration: underline;
@@ -215,15 +215,30 @@ h1 {
 h2 {
 	font-size: 5.2rem;
 	font-weight: 400;
-	color: $black;
-	letter-spacing: -0.03em;
 }
 
 h3 {
 	font-size: 2rem;
 	font-weight: 400;
-	color: $black;
-	letter-spacing: -0.03em;
+}
+
+h6 {
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+.lang {
+	display: flex;
+	gap: 0.7rem;
+
+	a {
+		letter-spacing: -0.03em;
+		font-size: 1.4rem;
+	}
+
+	a:not(.active) {
+		opacity: 0.4;
+	}
 }
 
 .card {
